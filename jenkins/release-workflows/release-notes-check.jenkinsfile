@@ -131,7 +131,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'jenkins-github-bot-token', passwordVariable: 'GITHUB_TOKEN', usernameVariable: 'GITHUB_USER')]) {
                         try {
                             sh """
-                                git remote set-url origin "https://opensearch-ci:${GITHUB_TOKEN}@github.com/opensearch-project/opensearch-build"
+                                git remote set-url origin "https://opensearch-ci:${GITHUB_TOKEN}@github.com/bshien/opensearch-build"
                                 git config user.email "opensearch-infra@amazon.com"
                                 git config user.name "opensearch-ci"
                                 git checkout -b release-notes
